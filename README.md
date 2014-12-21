@@ -1,23 +1,42 @@
-# Getting and Cleaning Data course 
+# Getting and Cleaning Data course project.
+
+This _Readme_ gives an overview of the project scripts.
+
+
+## Script.
+
+### run_analysis.R
+
+This script performs the data analysis.
+
+- Downloads the file on the exercise into the _data_ folder. URL: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+- Extracts the contents into the working directory and renames the extracted folder to the correct name.
+- Reads from raw data from the extracted files.
+- Performs the merging and cleaning of data required by project specification.
+- Saves the tidy dataset in CSV format.
+
+
+## How to run.
+
+- Clone the repository
+
+```
+git clone git@github.com:fernandezvara/getdata-016-peer.git
+```
+- Open RStudio.
+- Execute these commands in the RStudio console.
+
+```
+setwd( folder where you cloned the repository )
+source("run_analysis.R")
+```
+
+- Results are stored in the working directory. (merged_data.txt, data_with_means.txt)
+
+
+## Code Book
+
+The code book for this project is in CodeBook.md file. Contains the description of variables, data and transformations done using run_analysis.R.
+
 
 Student: Antonio Fernández Vara
-
-## Peer assessment
-
-
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.  
-
-One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
-
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
-
-Here are the data for the project: 
-
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
-
- You should create one R script called run_analysis.R that does the following. 
-Merges the training and the test sets to create one data set.
-Extracts only the measurements on the mean and standard deviation for each measurement. 
-Uses descriptive activity names to name the activities in the data set
-Appropriately labels the data set with descriptive variable names. 
-From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
